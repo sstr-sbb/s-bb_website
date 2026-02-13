@@ -9,7 +9,46 @@
   <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="fonts/inter.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "S-BB Baustoffprüfung GmbH",
+    "url": "https://www.s-bb.de",
+    "logo": "https://www.s-bb.de/images/logo.png",
+    "description": "Ingenieurbüro für Baugrund- und Betonuntersuchungen. Qualitätssicherung im Hoch-, Tief- und Straßenbau.",
+    "foundingDate": "1983",
+    "email": "info@s-bb.de",
+    "sameAs": ["https://www.instagram.com/sbb_gmbh/"],
+    "location": [
+      {
+        "@type": "Place",
+        "name": "Büro Westpfalz / Saarland",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Auf dem Land 10",
+          "postalCode": "66989",
+          "addressLocality": "Höheinöd",
+          "addressCountry": "DE"
+        },
+        "telephone": "+4963332754830"
+      },
+      {
+        "@type": "Place",
+        "name": "Büro Rhein-Main",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Waldstraße 40",
+          "postalCode": "65451",
+          "addressLocality": "Kelsterbach",
+          "addressCountry": "DE"
+        },
+        "telephone": "+4961073085441"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -17,7 +56,8 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="#home" class="logo">
-        <img src="images/logo.png" alt="S-BB Baustoffprüfung GmbH" width="120" height="61">
+        <img src="images/logo.png" alt="S-BB" width="120" height="61">
+        <span class="logo-text">Baustoffprüfung GmbH</span>
       </a>
       <nav class="nav" id="nav">
         <ul class="nav-list">
@@ -46,8 +86,8 @@
     <div class="hero-overlay"></div>
     <div class="hero-grain"></div>
     <div class="hero-content animate-in">
-      <span class="hero-badge">Seit 1983 · Boden verstehen. Beton beherrschen.</span>
       <h1><img src="images/logo.png" alt="S-BB" class="hero-logo"> Baustoffprüfung GmbH</h1>
+      <span class="hero-badge"><span>Seit 1983.</span> <span>Boden verstehen.</span> <span>Beton beherrschen.</span></span>
       <a href="#ueber-uns" class="hero-scroll" aria-label="Weiter scrollen">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
       </a>
@@ -95,13 +135,13 @@
         </div>
         <div class="about-image reveal">
           <div class="slideshow">
-            <img src="images/about-01.jpg" alt="S-BB Firmengebäude und Labor" loading="lazy" class="slide active">
-            <img src="images/about-02.jpg" alt="S-BB Laborarbeit" loading="lazy" class="slide">
-            <img src="images/about-03.jpg" alt="S-BB Feldversuche" loading="lazy" class="slide">
-            <img src="images/about-04.jpg" alt="S-BB Baustoffprüfung" loading="lazy" class="slide">
-            <img src="images/about-05.jpg" alt="S-BB Geräte und Ausstattung" loading="lazy" class="slide">
-            <img src="images/about-06.jpg" alt="S-BB Team bei der Arbeit" loading="lazy" class="slide">
-            <img src="images/about-07.jpg" alt="S-BB Projektarbeit" loading="lazy" class="slide">
+            <img src="images/about-01.webp" alt="S-BB Firmengebäude und Labor" loading="lazy" class="slide active">
+            <img src="images/about-02.webp" alt="S-BB Laborarbeit" loading="lazy" class="slide">
+            <img src="images/about-03.webp" alt="S-BB Feldversuche" loading="lazy" class="slide">
+            <img src="images/about-04.webp" alt="S-BB Baustoffprüfung" loading="lazy" class="slide">
+            <img src="images/about-05.webp" alt="S-BB Geräte und Ausstattung" loading="lazy" class="slide">
+            <img src="images/about-06.webp" alt="S-BB Team bei der Arbeit" loading="lazy" class="slide">
+            <img src="images/about-07.webp" alt="S-BB Projektarbeit" loading="lazy" class="slide">
           </div>
         </div>
       </div>
@@ -178,7 +218,8 @@
           </div>
           <h3>Umwelt &amp; Abfalltechnik</h3>
           <ul class="bento-list">
-            <li>Abfalldeklarationsanalytik / LAGA-Untersuchungen</li>
+            <li>Umweltgüteüberwachung gemäß Ersatzbaustoffverordnung (EBV)</li>
+            <li>Abfalldeklarationsanalytik / LAGA-Untersuchungen / Deponieverordnung</li>
             <li>Altlasten-Vorerkundung</li>
             <li>Schadstoffuntersuchung vor Abbruch / Rückbau</li>
           </ul>
@@ -193,8 +234,10 @@
           <h3>Beratung &amp; Qualitätssicherung</h3>
           <ul class="bento-list">
             <li>Betontechnologische Beratung</li>
-            <li>Baubegleitende Qualitätssicherung im Erdbau</li>
-            <li>Fremdüberwachung / Kontrollprüfungen</li>
+            <li>Geotechnische Beratung</li>
+            <li>Baubegleitende Qualitätssicherung im Erdbau, Eigenüberwachung</li>
+            <li>Fremdüberwachung EN 12620, EN 13043, TL G SoB-StB, TL Pflaster u.&nbsp;a.</li>
+            <li>Kontrollprüfungen</li>
           </ul>
           <span class="bento-more">…</span>
         </div>
@@ -235,10 +278,10 @@
           </div>
           <div class="timeline-image">
             <div class="slideshow">
-              <img src="images/historie-1983-1.jpg" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide active">
-              <img src="images/historie-1983-2.jpg" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide">
-              <img src="images/historie-1983-3.jpg" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide">
-              <img src="images/historie-1983-4.jpg" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide">
+              <img src="images/historie-1983-1.webp" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide active">
+              <img src="images/historie-1983-2.webp" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide">
+              <img src="images/historie-1983-3.webp" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide">
+              <img src="images/historie-1983-4.webp" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide">
             </div>
           </div>
         </div>
@@ -251,10 +294,10 @@
           </div>
           <div class="timeline-image">
             <div class="slideshow">
-              <img src="images/historie-2000-1.jpg" alt="Neubau in Höheinöd" loading="lazy" class="slide active">
-              <img src="images/historie-2000-2.jpg" alt="Neubau in Höheinöd" loading="lazy" class="slide">
-              <img src="images/historie-2000-3.jpg" alt="Neubau in Höheinöd" loading="lazy" class="slide">
-              <img src="images/historie-2000-4.jpg" alt="Neubau in Höheinöd" loading="lazy" class="slide">
+              <img src="images/historie-2000-1.webp" alt="Neubau in Höheinöd" loading="lazy" class="slide active">
+              <img src="images/historie-2000-2.webp" alt="Neubau in Höheinöd" loading="lazy" class="slide">
+              <img src="images/historie-2000-3.webp" alt="Neubau in Höheinöd" loading="lazy" class="slide">
+              <img src="images/historie-2000-4.webp" alt="Neubau in Höheinöd" loading="lazy" class="slide">
             </div>
           </div>
         </div>
@@ -267,10 +310,10 @@
           </div>
           <div class="timeline-image">
             <div class="slideshow">
-              <img src="images/historie-2008-1.jpg" alt="Wachstum und neues Büro" loading="lazy" class="slide active">
-              <img src="images/historie-2008-2.jpg" alt="Wachstum und neues Büro" loading="lazy" class="slide">
-              <img src="images/historie-2008-3.jpg" alt="Wachstum und neues Büro" loading="lazy" class="slide">
-              <img src="images/historie-2008-4.jpg" alt="Wachstum und neues Büro" loading="lazy" class="slide">
+              <img src="images/historie-2008-1.webp" alt="Wachstum und neues Büro" loading="lazy" class="slide active">
+              <img src="images/historie-2008-2.webp" alt="Wachstum und neues Büro" loading="lazy" class="slide">
+              <img src="images/historie-2008-3.webp" alt="Wachstum und neues Büro" loading="lazy" class="slide">
+              <img src="images/historie-2008-4.webp" alt="Wachstum und neues Büro" loading="lazy" class="slide">
             </div>
           </div>
         </div>
@@ -283,10 +326,10 @@
           </div>
           <div class="timeline-image">
             <div class="slideshow">
-              <img src="images/historie-2017-1.jpg" alt="Modernisierung 2017/2018" loading="lazy" class="slide active">
-              <img src="images/historie-2017-2.jpg" alt="Modernisierung 2017/2018" loading="lazy" class="slide">
-              <img src="images/historie-2017-3.jpg" alt="Modernisierung 2017/2018" loading="lazy" class="slide">
-              <img src="images/historie-2017-4.jpg" alt="Modernisierung 2017/2018" loading="lazy" class="slide">
+              <img src="images/historie-2017-1.webp" alt="Modernisierung 2017/2018" loading="lazy" class="slide active">
+              <img src="images/historie-2017-2.webp" alt="Modernisierung 2017/2018" loading="lazy" class="slide">
+              <img src="images/historie-2017-3.webp" alt="Modernisierung 2017/2018" loading="lazy" class="slide">
+              <img src="images/historie-2017-4.webp" alt="Modernisierung 2017/2018" loading="lazy" class="slide">
             </div>
           </div>
         </div>
@@ -305,15 +348,15 @@
 
       <div class="contact-grid">
         <div class="contact-card reveal">
-          <a href="https://graphhopper.com/maps/?point=&point=Auf+dem+Land+10%2C+66989+H%C3%B6hein%C3%B6d&locale=de" target="_blank" rel="noopener" class="contact-map-link">
+          <a href="https://graphhopper.com/maps/?point=&point=Auf+dem+Land+10%2C+66989+H%C3%B6hein%C3%B6d&locale=de" target="_blank" rel="noopener" class="contact-map-link map-nav-link" data-address="Auf dem Land 10, 66989 Höheinöd">
             <div class="contact-map">
-              <img src="images/map-hoeheinoed.png" alt="Kartenausschnitt Standort Höheinöd" width="600" height="300" loading="lazy">
+              <img src="images/map-hoeheinoed.webp" alt="Kartenausschnitt Standort Höheinöd" width="600" height="300" loading="lazy">
             </div>
           </a>
           <span class="map-attribution">&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
           <h3>Büro Westpfalz / Saarland</h3>
           <address>
-            <p class="contact-address"><a href="https://graphhopper.com/maps/?point=&point=Auf+dem+Land+10%2C+66989+H%C3%B6hein%C3%B6d&locale=de" target="_blank" rel="noopener">Auf dem Land 10<br>66989 Höheinöd</a></p>
+            <p class="contact-address"><a href="https://graphhopper.com/maps/?point=&point=Auf+dem+Land+10%2C+66989+H%C3%B6hein%C3%B6d&locale=de" target="_blank" rel="noopener" class="map-nav-link" data-address="Auf dem Land 10, 66989 Höheinöd">Auf dem Land 10<br>66989 Höheinöd</a></p>
             <p class="contact-detail">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               <a href="tel:+4963332754830">0 63 33 / 27 54 83 – 0</a>
@@ -326,15 +369,15 @@
         </div>
 
         <div class="contact-card reveal">
-          <a href="https://graphhopper.com/maps/?point=&point=Waldstra%C3%9Fe+40%2C+65451+Kelsterbach&locale=de" target="_blank" rel="noopener" class="contact-map-link">
+          <a href="https://graphhopper.com/maps/?point=&point=Waldstra%C3%9Fe+40%2C+65451+Kelsterbach&locale=de" target="_blank" rel="noopener" class="contact-map-link map-nav-link" data-address="Waldstraße 40, 65451 Kelsterbach">
             <div class="contact-map">
-              <img src="images/map-kelsterbach.png" alt="Kartenausschnitt Standort Kelsterbach" width="600" height="300" loading="lazy">
+              <img src="images/map-kelsterbach.webp" alt="Kartenausschnitt Standort Kelsterbach" width="600" height="300" loading="lazy">
             </div>
           </a>
           <span class="map-attribution">&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
           <h3>Büro Rhein-Main</h3>
           <address>
-            <p class="contact-address"><a href="https://graphhopper.com/maps/?point=&point=Waldstra%C3%9Fe+40%2C+65451+Kelsterbach&locale=de" target="_blank" rel="noopener">Waldstraße 40<br>65451 Kelsterbach</a></p>
+            <p class="contact-address"><a href="https://graphhopper.com/maps/?point=&point=Waldstra%C3%9Fe+40%2C+65451+Kelsterbach&locale=de" target="_blank" rel="noopener" class="map-nav-link" data-address="Waldstraße 40, 65451 Kelsterbach">Waldstraße 40<br>65451 Kelsterbach</a></p>
             <p class="contact-detail">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               <a href="tel:+4961073085441">0 61 07 / 30 85 44 – 1</a>
@@ -384,12 +427,23 @@
             <textarea id="nachricht" name="nachricht" rows="5" placeholder=" " required></textarea>
             <label for="nachricht">Ihre Nachricht <span class="required">*</span></label>
           </div>
+          <input type="hidden" name="csrf_token" id="csrf_token" value="">
           <div class="form-group form-checkbox">
             <input type="checkbox" id="datenschutz" name="datenschutz" required>
-            <label for="datenschutz">Ich habe die <a href="#" id="datenschutz-link">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. <span class="required">*</span></label>
+            <label for="datenschutz">Ich habe die <a href="datenschutz.html" id="datenschutz-link">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. <span class="required">*</span></label>
           </div>
           <button type="submit" class="btn btn-gradient btn-submit">Nachricht senden</button>
         </form>
+      </div>
+
+      <!-- Instagram -->
+      <div class="instagram-cta reveal">
+        <h3>Besuchen Sie uns auf Instagram</h3>
+        <p>Einblicke in unsere Projekte, Baustellen und das Team.</p>
+        <a href="https://www.instagram.com/sbb_gmbh/" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          @sbb_gmbh
+        </a>
       </div>
     </div>
   </section>
@@ -412,49 +466,49 @@
           </div>
         </div>
         <div class="cert-badge">
-          <a href="https://www.vmpa.de/pruefstellen/betonpruefstellen/" target="_blank" rel="noopener"><img src="images/partner-vmpa.jpg" alt="VMPA anerkannte Betonprüfstelle" class="cert-badge-logo"></a>
+          <a href="https://www.vmpa.de/pruefstellen/betonpruefstellen/" target="_blank" rel="noopener"><img src="images/partner-vmpa.webp" alt="VMPA anerkannte Betonprüfstelle" class="cert-badge-logo" loading="lazy"></a>
           <div class="cert-badge-text">
             <span class="cert-badge-title">VMPA</span>
             <span class="cert-badge-desc">Anerkannte Betonprüfstelle</span>
           </div>
         </div>
         <div class="cert-badge">
-          <a href="https://buev-hrs.de/" target="_blank" rel="noopener"><img src="images/partner-buev-hrs.jpg" alt="BÜV.HRS" class="cert-badge-logo"></a>
+          <a href="https://buev-hrs.de/" target="_blank" rel="noopener"><img src="images/partner-buev-hrs.webp" alt="BÜV.HRS" class="cert-badge-logo" loading="lazy"></a>
           <div class="cert-badge-text">
             <span class="cert-badge-title">BÜV.HRS</span>
             <span class="cert-badge-desc">Mitglied im Baustoffüberwachungsverein Hessen – Rheinland-Pfalz – Saarland e.V.</span>
           </div>
         </div>
         <div class="cert-badge">
-          <a href="https://gbb-web.de/" target="_blank" rel="noopener"><img src="images/partner-gbb.png" alt="GBB" class="cert-badge-logo"></a>
+          <a href="https://gbb-web.de/" target="_blank" rel="noopener"><img src="images/partner-gbb.png" alt="GBB" class="cert-badge-logo" loading="lazy"></a>
           <div class="cert-badge-text">
             <span class="cert-badge-title">GBB</span>
             <span class="cert-badge-desc">Mitglied der Gütegemeinschaft für Bodenverfestigung und Bodenverbesserung</span>
           </div>
         </div>
         <div class="cert-badge">
-          <a href="https://www.ral-gg-fluessigboden.de/" target="_blank" rel="noopener"><img src="images/partner-ral-fluessigboden.png" alt="RAL Gütezeichen Flüssigboden" class="cert-badge-logo"></a>
+          <a href="https://www.ral-gg-fluessigboden.de/" target="_blank" rel="noopener"><img src="images/partner-ral-fluessigboden.png" alt="RAL Gütezeichen Flüssigboden" class="cert-badge-logo" loading="lazy"></a>
           <div class="cert-badge-text">
             <span class="cert-badge-title">RAL Flüssigboden</span>
             <span class="cert-badge-desc">Mitglied der RAL Gütegemeinschaft Flüssigboden</span>
           </div>
         </div>
         <div class="cert-badge">
-          <a href="https://wfg-suedwestpfalz.de/" target="_blank" rel="noopener"><img src="images/partner-wfg-suedwestpfalz.png" alt="WFG Südwestpfalz" class="cert-badge-logo"></a>
+          <a href="https://wfg-suedwestpfalz.de/" target="_blank" rel="noopener"><img src="images/partner-wfg-suedwestpfalz.png" alt="WFG Südwestpfalz" class="cert-badge-logo" loading="lazy"></a>
           <div class="cert-badge-text">
             <span class="cert-badge-title">WFG Südwestpfalz</span>
             <span class="cert-badge-desc">Mitglied der Wirtschaftsförderungsgesellschaft Südwestpfalz</span>
           </div>
         </div>
         <div class="cert-badge">
-          <a href="https://www.ihk.de/pfalz/produktmarken/ausbildung" target="_blank" rel="noopener"><img src="images/partner-ihk-pfalz.png" alt="IHK Pfalz" class="cert-badge-logo"></a>
+          <a href="https://www.ihk.de/pfalz/produktmarken/ausbildung" target="_blank" rel="noopener"><img src="images/partner-ihk-pfalz.png" alt="IHK Pfalz" class="cert-badge-logo" loading="lazy"></a>
           <div class="cert-badge-text">
             <span class="cert-badge-title">IHK Pfalz</span>
             <span class="cert-badge-desc">Anerkannter Ausbildungsbetrieb der IHK Pfalz</span>
           </div>
         </div>
         <div class="cert-badge">
-          <a href="https://www.mosbach.dhbw.de/" target="_blank" rel="noopener"><img src="images/partner-dhbw-mosbach.png" alt="DHBW Mosbach" class="cert-badge-logo"></a>
+          <a href="https://www.mosbach.dhbw.de/" target="_blank" rel="noopener"><img src="images/partner-dhbw-mosbach.png" alt="DHBW Mosbach" class="cert-badge-logo" loading="lazy"></a>
           <div class="cert-badge-text">
             <span class="cert-badge-title">DHBW Mosbach</span>
             <span class="cert-badge-desc">Partnerunternehmen der Dualen Hochschule Baden-Württemberg Mosbach</span>
@@ -478,6 +532,7 @@
     <div class="container footer-inner">
       <a href="#home" class="footer-logo">
         <img src="images/logo.png" alt="S-BB" width="60" height="31">
+        <span class="footer-logo-text">Baustoffprüfung GmbH</span>
       </a>
       <div class="footer-links">
         <a href="impressum.html" class="footer-link" id="impressum-btn">Impressum</a>
@@ -499,6 +554,17 @@
     <div class="modal" id="modal">
       <button class="modal-close" id="modal-close" aria-label="Schließen">&times;</button>
       <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- External Link Dialog -->
+  <div class="ext-dialog-overlay" id="ext-dialog">
+    <div class="ext-dialog">
+      <p>Sie öffnen eine Seite eines externen Anbieters:<br><strong id="ext-host"></strong></p>
+      <div class="ext-dialog-actions">
+        <button class="btn btn-outline" id="ext-cancel">Abbrechen</button>
+        <a href="#" class="btn btn-gradient" id="ext-confirm" target="_blank" rel="noopener">Weiter</a>
+      </div>
     </div>
   </div>
 

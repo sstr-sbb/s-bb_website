@@ -11,6 +11,21 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+// Session mit sicheren Optionen starten
+session_start([
+    'cookie_httponly' => true,
+    'cookie_samesite' => 'Strict',
+    'cookie_secure' => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on',
+]);
+
+// CSRF-Token prüfen
+if (empty($_POST['csrf_token']) || empty($_SESSION['csrf_token'])
+    || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'message' => 'Sicherheitsprüfung fehlgeschlagen. Bitte laden Sie die Seite neu und versuchen Sie es erneut.']);
+    exit;
+}
+
 // Honeypot-Check (Spam-Schutz)
 if (!empty($_POST['website'])) {
     // Bot hat das versteckte Feld ausgefüllt
@@ -43,8 +58,12 @@ if (!$email) {
     exit;
 }
 
+// Header-Injection verhindern: Zeilenumbrüche aus Benutzereingaben entfernen
+$vorname  = str_replace(["\r", "\n"], '', $vorname);
+$nachname = str_replace(["\r", "\n"], '', $nachname);
+$email    = str_replace(["\r", "\n"], '', $email);
+
 // Rate-Limiting (einfach, session-basiert)
-session_start();
 $now = time();
 if (isset($_SESSION['last_contact_submit']) && ($now - $_SESSION['last_contact_submit']) < 60) {
     http_response_code(429);
@@ -55,7 +74,7 @@ if (isset($_SESSION['last_contact_submit']) && ($now - $_SESSION['last_contact_s
 // Empfänger
 $to = 'info@s-bb.de';
 
-// Betreff
+// Betreff (Zeilenumbrüche bereits entfernt)
 $subject = "Kontaktanfrage von $vorname $nachname";
 
 // E-Mail-Text
@@ -84,7 +103,9 @@ $sent = mail($to, $subject, $body, $headers);
 
 if ($sent) {
     $_SESSION['last_contact_submit'] = $now;
-    echo json_encode(['success' => true, 'message' => 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.']);
+    // CSRF-Token nach erfolgreichem Senden erneuern
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    echo json_encode(['success' => true, 'message' => 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.', 'new_token' => $_SESSION['csrf_token']]);
 } else {
     http_response_code(500);
     echo json_encode(['success' => false, 'message' => 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns telefonisch.']);

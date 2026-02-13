@@ -59,14 +59,12 @@
   menuToggle.addEventListener('click', function () {
     this.classList.toggle('open');
     nav.classList.toggle('open');
-    document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
   });
 
   nav.querySelectorAll('.nav-link').forEach(function (link) {
     link.addEventListener('click', function () {
       menuToggle.classList.remove('open');
       nav.classList.remove('open');
-      document.body.style.overflow = '';
     });
   });
 
@@ -77,6 +75,14 @@
   var backToTop = document.getElementById('back-to-top');
   var sections = document.querySelectorAll('section[id]');
   var navLinks = document.querySelectorAll('.nav-link');
+
+  // Show header logo only when hero logo scrolls out of view
+  var heroLogo = document.querySelector('.hero-logo');
+  if (heroLogo) {
+    new IntersectionObserver(function (entries) {
+      header.classList.toggle('show-logo', !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(heroLogo);
+  }
 
   window.addEventListener('scroll', function () {
     header.classList.toggle('scrolled', window.scrollY > 50);
@@ -123,7 +129,9 @@
     e.preventDefault();
     openModal(
       '<h2>Impressum</h2>' +
-      '<p><strong>Angaben gemäß § 5 DDG:</strong><br>S-BB Baustoffprüfung GmbH<br>Auf dem Land 10<br>66989 Höheinöd</p>' +
+      '<p><strong>Angaben gemäß § 5 DDG:</strong><br>S-BB Baustoffprüfung GmbH</p>' +
+      '<p><strong>Hauptsitz:</strong><br>Auf dem Land 10<br>66989 Höheinöd</p>' +
+      '<p><strong>Niederlassung Kelsterbach:</strong><br>Waldstraße 40<br>65451 Kelsterbach</p>' +
       '<p><strong>Vertreten durch:</strong><br>Dipl.-Wirtsch.-Ing. (FH) Christian Stracke<br>Dipl.-Ing. (BA) Steffen Stracke</p>' +
       '<p><strong>Kontakt:</strong><br>Telefon: 06333 2754830<br>Telefax: 06333 27548320<br>E-Mail: info@s-bb.de</p>' +
       '<p><strong>Registereintrag:</strong><br>Eintragung im Handelsregister<br>Registergericht: Zweibrücken<br>Registernummer: HRB 3174</p>' +
@@ -169,7 +177,7 @@
     '<h3>6. Kontaktformular</h3>' +
     '<p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular (Vorname, Nachname, Firma, E-Mail-Adresse, Telefonnummer, Nachricht) zur Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>' +
     '<p>Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt auf Grundlage Ihrer Einwilligung (Art.\u00a06 Abs.\u00a01 lit.\u00a0a DSGVO). Sie können diese Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns.</p>' +
-    '<p>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</p>' +
+    '<p>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. In der Regel löschen wir Ihre Kontaktanfrage spätestens 6\u00a0Monate nach abschließender Bearbeitung, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Zwingende gesetzliche Bestimmungen – insbesondere handels- und steuerrechtliche Aufbewahrungsfristen von bis zu 10\u00a0Jahren (§\u00a0257 HGB, §\u00a0147 AO) – bleiben unberührt.</p>' +
 
     '<h3>7. Kontaktaufnahme per E-Mail oder Telefon</h3>' +
     '<p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art.\u00a06 Abs.\u00a01 lit.\u00a0b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse (Art.\u00a06 Abs.\u00a01 lit.\u00a0f DSGVO).</p>' +
@@ -177,8 +185,9 @@
     '<h3>8. Kartendarstellung</h3>' +
     '<p>Unsere Website zeigt statische Kartenbilder zur Darstellung unserer Standorte. Die Kartenbilder basieren auf Kartendaten von OpenStreetMap (\u00a9 OpenStreetMap-Mitwirkende, Lizenz: ODbL). Die Bilder sind lokal auf unserem Server gespeichert. Beim Aufruf unserer Website wird keine Verbindung zu Servern der OpenStreetMap Foundation hergestellt.</p>' +
 
-    '<h3>9. Externe Links</h3>' +
-    '<p>Unsere Website enthält Links zu externen Websites Dritter (z.\u00a0B. GraphHopper Maps zur Navigation, Verbände und Partner). Beim Anklicken dieser Links werden Sie auf die Seiten der jeweiligen Anbieter weitergeleitet. Erst beim Anklicken werden Daten an den jeweiligen Anbieter übertragen. Informationen zum Umgang mit Ihren Daten entnehmen Sie bitte den Datenschutzerklärungen der jeweiligen Anbieter.</p>' +
+    '<h3>9. Externe Links und Routenplanung</h3>' +
+    '<p>Unsere Website enthält Links zu externen Websites Dritter (z.\u00a0B. Verbände und Partner). Beim Anklicken dieser Links werden Sie auf die Seiten der jeweiligen Anbieter weitergeleitet. Erst beim Anklicken werden Daten an den jeweiligen Anbieter übertragen. Informationen zum Umgang mit Ihren Daten entnehmen Sie bitte den Datenschutzerklärungen der jeweiligen Anbieter.</p>' +
+    '<p><strong>Routenplanung über GraphHopper Maps:</strong> Auf Desktop-Geräten öffnen die Standort-Links unserer Büros den externen Dienst GraphHopper Maps (graphhopper.com/maps) zur Routenplanung. Auf Mobilgeräten wird stattdessen die geräteeigene Navigations-App aufgerufen. Bei Nutzung von GraphHopper Maps werden Ihre IP-Adresse sowie Start- und Zieladresse an die GraphHopper GmbH, Arnulfstraße\u00a060, 80335 München übertragen. Es gelten die Datenschutzbestimmungen von GraphHopper: <a href="https://www.graphhopper.com/privacy/" target="_blank" rel="noopener">https://www.graphhopper.com/privacy/</a>. Die Datenübertragung erfolgt erst durch Ihren aktiven Klick auf den jeweiligen Standort-Link (Rechtsgrundlage: Art.\u00a06 Abs.\u00a01 lit.\u00a0a DSGVO).</p>' +
 
     '<h3>10. Social-Media-Verlinkung</h3>' +
     '<p>Unsere Website enthält einen Link zu unserem Instagram-Profil. Es handelt sich um einen einfachen Hyperlink; beim Aufruf unserer Website werden keine Daten an Meta Platforms Ireland Limited übertragen. Erst wenn Sie den Link anklicken, werden Sie auf die Instagram-Website weitergeleitet, und es gelten die Datenschutzbestimmungen von Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland. Informationen zur Datenverarbeitung durch Instagram finden Sie unter: <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener">https://privacycenter.instagram.com/policy</a></p>' +
@@ -241,12 +250,18 @@
   document.getElementById('agb-btn').addEventListener('click', function (e) { e.preventDefault(); openModal(agbHTML); });
 
   // =============================================
-  // Contact Form – AJAX Submit
+  // Contact Form – CSRF Token & AJAX Submit
   // =============================================
   var form = document.getElementById('contact-form');
   var statusDiv = document.createElement('div');
   statusDiv.className = 'form-status';
   form.parentNode.insertBefore(statusDiv, form);
+
+  // CSRF-Token beim Laden holen
+  fetch('csrf_token.php')
+    .then(function (r) { return r.json(); })
+    .then(function (d) { document.getElementById('csrf_token').value = d.token; })
+    .catch(function () {});
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -262,6 +277,7 @@
         if (result.ok && result.data.success) {
           statusDiv.className = 'form-status success';
           statusDiv.textContent = result.data.message;
+          if (result.data.new_token) { document.getElementById('csrf_token').value = result.data.new_token; }
           form.reset();
         } else {
           statusDiv.className = 'form-status error';
@@ -282,6 +298,64 @@
         statusDiv.textContent = 'Ihr E-Mail-Programm wird geöffnet.';
       })
       .finally(function () { btn.textContent = originalText; btn.disabled = false; });
+  });
+
+  // =============================================
+  // Map Navigation Links (native app on mobile)
+  // =============================================
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    document.querySelectorAll('.map-nav-link').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var address = this.getAttribute('data-address');
+        var encoded = encodeURIComponent(address);
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+          window.location.href = 'maps:?q=' + encoded;
+        } else {
+          window.location.href = 'geo:0,0?q=' + encoded;
+        }
+      });
+    });
+  }
+
+  // =============================================
+  // External Link Confirmation Dialog
+  // =============================================
+  var extDialog = document.getElementById('ext-dialog');
+  var extConfirm = document.getElementById('ext-confirm');
+  var extCancel = document.getElementById('ext-cancel');
+
+  var extHost = document.getElementById('ext-host');
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('#ext-confirm')) return;
+    var link = e.target.closest('a[target="_blank"]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    if (!href || href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0) return;
+    var url;
+    try {
+      url = new URL(href, window.location.origin);
+      if (url.hostname === window.location.hostname) return;
+    } catch (_) { return; }
+    if (link.classList.contains('map-nav-link') && isMobile) return;
+    e.preventDefault();
+    extConfirm.href = href;
+    extHost.textContent = url.hostname.replace(/^www\./, '');
+    extDialog.classList.add('open');
+  });
+
+  extCancel.addEventListener('click', function () {
+    extDialog.classList.remove('open');
+  });
+
+  extConfirm.addEventListener('click', function () {
+    extDialog.classList.remove('open');
+  });
+
+  extDialog.addEventListener('click', function (e) {
+    if (e.target === extDialog) extDialog.classList.remove('open');
   });
 
   // =============================================
