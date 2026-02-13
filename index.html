@@ -8,10 +8,7 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="fonts/inter.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,8 +27,11 @@
           <li><a href="#historie" class="nav-link">Historie</a></li>
           <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
         </ul>
+        <a href="https://www.instagram.com/sbb_gmbh/" target="_blank" rel="noopener" class="nav-social" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
         <a href="tel:+4963332754830" class="nav-phone">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           0 63 33 / 27 54 83 - 0
         </a>
       </nav>
@@ -49,7 +49,7 @@
       <span class="hero-badge">Seit 1983 · Boden verstehen. Beton beherrschen.</span>
       <h1><img src="images/logo.png" alt="S-BB" class="hero-logo"> Baustoffprüfung GmbH</h1>
       <a href="#ueber-uns" class="hero-scroll" aria-label="Weiter scrollen">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
       </a>
     </div>
   </section>
@@ -64,6 +64,10 @@
       <div class="stat-item reveal">
         <span class="stat-number">2</span>
         <span class="stat-label">Standorte</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">20+</span>
+        <span class="stat-label">Qualifizierte Mitarbeiter</span>
       </div>
       <div class="stat-item reveal">
         <span class="stat-number">RAP Stra</span>
@@ -83,20 +87,22 @@
         <div class="about-text reveal">
           <span class="section-label">Über uns</span>
           <h2 class="section-title">Qualitätssicherung aus einer Hand</h2>
-          <p>Als Ingenieurbüro für Baugrund- und Betonuntersuchungen begleiten wir Ihre Projekte im Hoch-, Tief- und Straßenbau – von der ersten Erkundung bis zum fertigen Bauwerk.</p>
+          <p>Als Ingenieurbüro für Baugrund- und Betonuntersuchungen begleiten wir Ihre Projekte im Hoch-, Tief- und Straßenbau – von der ersten Erkundung bis zum fertigen Bauwerk. Dabei setzen wir auf <strong>Zuverlässigkeit</strong>, <strong>Flexibilität</strong> und <strong>Fachkompetenz</strong>.</p>
           <p>Steigende Anforderungen an die Dauerhaftigkeit von Bauwerken erfordern qualifizierte Prüfungen und eine lückenlose Überwachung. Genau dafür stehen wir: mit Expertise in Geotechnik, Bodenmechanik und Betontechnologie.</p>
-          <div class="about-pills">
-            <span class="pill">Zuverlässigkeit</span>
-            <span class="pill">Flexibilität</span>
-            <span class="pill">Fachkompetenz</span>
-          </div>
           <div class="about-buttons">
-            <a href="#leistungen" class="btn btn-outline">Leistungen</a>
             <a href="#kontakt" class="btn btn-outline">Kontakt aufnehmen</a>
           </div>
         </div>
         <div class="about-image reveal">
-          <img src="images/luftbild.jpg" alt="S-BB Firmengebäude Luftbild" loading="lazy" width="1000" height="600">
+          <div class="slideshow">
+            <img src="images/slide001-min.jpg" alt="S-BB Firmengebäude und Labor" loading="lazy" class="slide active">
+            <img src="images/slide002-min.jpg" alt="S-BB Laborarbeit" loading="lazy" class="slide">
+            <img src="images/slide003-min.jpg" alt="S-BB Feldversuche" loading="lazy" class="slide">
+            <img src="images/slide004-min.jpg" alt="S-BB Baustoffprüfung" loading="lazy" class="slide">
+            <img src="images/slide005-min.jpg" alt="S-BB Geräte und Ausstattung" loading="lazy" class="slide">
+            <img src="images/slide006-min.jpg" alt="S-BB Team bei der Arbeit" loading="lazy" class="slide">
+            <img src="images/slide007-min.jpg" alt="S-BB Projektarbeit" loading="lazy" class="slide">
+          </div>
         </div>
       </div>
     </div>
@@ -114,7 +120,7 @@
         <!-- Bodenmechanik (groß) -->
         <div class="bento-card bento-large reveal">
           <div class="bento-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5L12 2z"/><path d="M2 12l10 5 10-5"/><path d="M2 17l10 5 10-5"/></svg>
           </div>
           <h3>Bodenmechanik</h3>
           <ul class="bento-list">
@@ -131,18 +137,23 @@
             <li>Prüfung der Durchlässigkeit</li>
             <li>Eignungsnachweise / Frostbeständigkeit</li>
             <li>CBR-Versuche</li>
+            <li>Rahmenscherversuche</li>
+            <li>Einaxiale Druckversuche</li>
+            <li>Eignungsprüfungen für Boden-Bindemittel-Gemische</li>
+            <li>Eignungsprüfungen für Recyclingbaustoffe</li>
+            <li>Prüfungen nach ZTV E-StB / ZTV SoB-StB</li>
           </ul>
-          <a href="#kontakt" class="bento-link">Weitere auf Anfrage →</a>
+          <span class="bento-more">…</span>
         </div>
 
         <!-- Betontechnik (groß) -->
         <div class="bento-card bento-large reveal">
           <div class="bento-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5"/><path d="M12 12L4 7.5"/><path d="M12 12v9"/></svg>
           </div>
           <h3>Betontechnik</h3>
           <ul class="bento-list">
-            <li>Eigenüberwachung von ÜK2/3 Baustellen</li>
+            <li>Eigenüberwachung von ÜK2 Baustellen</li>
             <li>Druckfestigkeitsprüfungen</li>
             <li>Wasserundurchlässigkeitsprüfungen</li>
             <li>Rückprallprüfung</li>
@@ -151,14 +162,47 @@
             <li>Prüfung des Luftporengehaltes</li>
             <li>Bestimmung des w/z-Wertes</li>
             <li>Bestimmung des Stahlfasergehaltes</li>
+            <li>Spaltzugfestigkeitsprüfungen</li>
+            <li>Rohdichtebestimmung am Festbeton</li>
+            <li>Karbonatisierungstiefenmessung</li>
+            <li>Estrich-Druckfestigkeitsprüfung</li>
+            <li>Estrich-Biegezugfestigkeitsprüfung</li>
           </ul>
-          <a href="#kontakt" class="bento-link">Weitere auf Anfrage →</a>
+          <span class="bento-more">…</span>
+        </div>
+
+        <!-- Umwelt & Abfalltechnik (klein) -->
+        <div class="bento-card bento-small reveal">
+          <div class="bento-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 19H4.815a1.83 1.83 0 01-1.57-.881 1.785 1.785 0 01-.004-1.784L7.196 9.5"/><path d="m14 16 3 3 3-3"/><path d="M8.293 13.596L7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0112.006 3c.617.006 1.185.342 1.485.886l3.949 6.838"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/><path d="M16.111 19H19.5a1.83 1.83 0 001.587-.944 1.8 1.8 0 00-.018-1.822L19.5 13.5"/><path d="m7 19 3-3-3-3"/></svg>
+          </div>
+          <h3>Umwelt &amp; Abfalltechnik</h3>
+          <ul class="bento-list">
+            <li>Abfalldeklarationsanalytik / LAGA-Untersuchungen</li>
+            <li>Altlasten-Vorerkundung</li>
+            <li>Schadstoffuntersuchung vor Abbruch / Rückbau</li>
+          </ul>
+          <span class="bento-more">…</span>
+        </div>
+
+        <!-- Beratung & Qualitätssicherung (klein) -->
+        <div class="bento-card bento-small reveal">
+          <div class="bento-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
+          </div>
+          <h3>Beratung &amp; Qualitätssicherung</h3>
+          <ul class="bento-list">
+            <li>Betontechnologische Beratung</li>
+            <li>Baubegleitende Qualitätssicherung im Erdbau</li>
+            <li>Fremdüberwachung / Kontrollprüfungen</li>
+          </ul>
+          <span class="bento-more">…</span>
         </div>
 
         <!-- Sonstiges (klein) -->
         <div class="bento-card bento-small reveal">
           <div class="bento-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
           </div>
           <h3>Sonstiges</h3>
           <ul class="bento-list">
@@ -166,10 +210,11 @@
             <li>Vermittlung von Asphaltprüfungen</li>
             <li>Erkundung für Baugrundgutachten</li>
           </ul>
-          <a href="#kontakt" class="bento-link">Weitere auf Anfrage →</a>
+          <span class="bento-more">…</span>
         </div>
 
       </div>
+      <p class="bento-footer reveal">Weitere Leistungen auf <a href="#kontakt">Anfrage</a></p>
     </div>
   </section>
 
@@ -260,36 +305,42 @@
 
       <div class="contact-grid">
         <div class="contact-card reveal">
-          <a href="https://www.google.com/maps/search/?api=1&query=Auf+dem+Land+10,+66989+Höheinöd" target="_blank" rel="noopener" class="contact-map-link">
-            <div class="contact-map" id="map-hoeheinoed"></div>
+          <a href="https://graphhopper.com/maps/?point=&point=Auf+dem+Land+10%2C+66989+H%C3%B6hein%C3%B6d&locale=de" target="_blank" rel="noopener" class="contact-map-link">
+            <div class="contact-map">
+              <img src="images/map-hoeheinoed.png?v=4" alt="Kartenausschnitt Standort Höheinöd" width="600" height="300" loading="lazy">
+            </div>
           </a>
+          <span class="map-attribution">&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
           <h3>Büro Westpfalz / Saarland</h3>
           <address>
-            <p class="contact-address"><a href="https://www.google.com/maps/search/?api=1&query=Auf+dem+Land+10,+66989+Höheinöd" target="_blank" rel="noopener">Auf dem Land 10<br>66989 Höheinöd</a></p>
+            <p class="contact-address"><a href="https://graphhopper.com/maps/?point=&point=Auf+dem+Land+10%2C+66989+H%C3%B6hein%C3%B6d&locale=de" target="_blank" rel="noopener">Auf dem Land 10<br>66989 Höheinöd</a></p>
             <p class="contact-detail">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               <a href="tel:+4963332754830">0 63 33 / 27 54 83 – 0</a>
             </p>
             <p class="contact-detail">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <a href="mailto:info@s-bb.de">info@s-bb.de</a>
             </p>
           </address>
         </div>
 
         <div class="contact-card reveal">
-          <a href="https://www.google.com/maps/search/?api=1&query=Waldstraße+40,+65451+Kelsterbach" target="_blank" rel="noopener" class="contact-map-link">
-            <div class="contact-map" id="map-kelsterbach"></div>
+          <a href="https://graphhopper.com/maps/?point=&point=Waldstra%C3%9Fe+40%2C+65451+Kelsterbach&locale=de" target="_blank" rel="noopener" class="contact-map-link">
+            <div class="contact-map">
+              <img src="images/map-kelsterbach.png?v=4" alt="Kartenausschnitt Standort Kelsterbach" width="600" height="300" loading="lazy">
+            </div>
           </a>
+          <span class="map-attribution">&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
           <h3>Büro Rhein-Main</h3>
           <address>
-            <p class="contact-address"><a href="https://www.google.com/maps/search/?api=1&query=Waldstraße+40,+65451+Kelsterbach" target="_blank" rel="noopener">Waldstraße 40<br>65451 Kelsterbach</a></p>
+            <p class="contact-address"><a href="https://graphhopper.com/maps/?point=&point=Waldstra%C3%9Fe+40%2C+65451+Kelsterbach&locale=de" target="_blank" rel="noopener">Waldstraße 40<br>65451 Kelsterbach</a></p>
             <p class="contact-detail">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               <a href="tel:+4961073085441">0 61 07 / 30 85 44 – 1</a>
             </p>
             <p class="contact-detail">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <a href="mailto:info@s-bb.de">info@s-bb.de</a>
             </p>
           </address>
@@ -335,7 +386,7 @@
           </div>
           <div class="form-group form-checkbox">
             <input type="checkbox" id="datenschutz" name="datenschutz" required>
-            <label for="datenschutz">Ich stimme der <a href="#" id="datenschutz-link">Datenschutzerklärung</a> zu. <span class="required">*</span></label>
+            <label for="datenschutz">Ich habe die <a href="#" id="datenschutz-link">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. <span class="required">*</span></label>
           </div>
           <button type="submit" class="btn btn-gradient btn-submit">Nachricht senden</button>
         </form>
@@ -429,13 +480,16 @@
         <img src="images/logo.png" alt="S-BB" width="60" height="31">
       </a>
       <div class="footer-links">
-        <button type="button" class="footer-link" id="impressum-btn">Impressum</button>
-        <button type="button" class="footer-link" id="datenschutz-btn">Datenschutz</button>
-        <button type="button" class="footer-link" id="agb-btn">AGB</button>
+        <a href="impressum.html" class="footer-link" id="impressum-btn">Impressum</a>
+        <a href="datenschutz.html" class="footer-link" id="datenschutz-btn">Datenschutz</a>
+        <a href="agb.html" class="footer-link" id="agb-btn">AGB</a>
       </div>
       <div class="footer-contact">
         <a href="mailto:info@s-bb.de">info@s-bb.de</a>
         <a href="tel:+4963332754830">0 63 33 / 27 54 83 – 0</a>
+        <a href="https://www.instagram.com/sbb_gmbh/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
       </div>
     </div>
   </footer>
@@ -450,10 +504,9 @@
 
   <!-- Back to top -->
   <a href="#home" class="back-to-top" id="back-to-top" aria-label="Nach oben">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
   </a>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="script.js"></script>
 </body>
 </html>
