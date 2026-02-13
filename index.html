@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S-BB Baustoffprüfung GmbH – Stracke – Baugrund + Beton</title>
+  <title>S-BB Baustoffprüfung GmbH – Ingenieurbüro für Baugrund und Beton</title>
   <meta name="description" content="S-BB Baustoffprüfung GmbH – Ihr Ingenieurbüro für Baugrund- und Betonuntersuchungen. Qualitätssicherung im Hoch-, Tief- und Straßenbau.">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -30,7 +30,10 @@
           <li><a href="#historie" class="nav-link">Historie</a></li>
           <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
         </ul>
-        <a href="tel:+4963332754830" class="nav-phone">0 63 33 / 27 54 83 - 0</a>
+        <a href="tel:+4963332754830" class="nav-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          0 63 33 / 27 54 83 - 0
+        </a>
       </nav>
       <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
@@ -41,40 +44,58 @@
   <!-- Hero -->
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>S-BB Baustoffprüfung GmbH</h1>
-      <p class="hero-subtitle">Stracke – Baugrund + Beton</p>
+    <div class="hero-grain"></div>
+    <div class="hero-content animate-in">
+      <span class="hero-badge">Seit 1983 · Boden verstehen. Beton beherrschen.</span>
+      <h1><img src="images/logo.png" alt="S-BB" class="hero-logo"> Baustoffprüfung GmbH</h1>
       <a href="#ueber-uns" class="hero-scroll" aria-label="Weiter scrollen">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </a>
     </div>
   </section>
 
+  <!-- Kennzahlen -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-number">40+</span>
+        <span class="stat-label">Jahre Erfahrung</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">2</span>
+        <span class="stat-label">Standorte</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">RAP Stra</span>
+        <span class="stat-label">Privatrechtlich anerkannt</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number">VMPA</span>
+        <span class="stat-label">Anerkannte Betonprüfstelle</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Über uns -->
   <section class="section" id="ueber-uns">
     <div class="container">
-      <h2 class="section-title">Über uns</h2>
       <div class="about-content">
-        <div class="about-text">
-          <p>Als Ingenieurbüro für Baugrund- und Betonuntersuchungen sind wir Ihr Ansprechpartner in allen Angelegenheiten der Qualitätssicherung im Hoch-, Tief- und Straßenbau.</p>
-          <p>Die gestiegenen Anforderungen an die Dauerhaftigkeit von Bauwerken erfordert eine umfassende Betreuung der Projekte durch qualifizierte Prüfungen und Überwachungen. Hier sind wir Ihre Ansprechpartner im Rahmen der Geotechnik, Bodenmechanik und Betontechnologie.</p>
-          <p><strong>Sprechen Sie uns an!</strong></p>
-          <div class="about-highlights">
-            <div class="highlight">
-              <span class="highlight-label">Unsere Stärken:</span>
-              <strong>Zuverlässigkeit | Flexibilität | Fachkompetenz</strong>
-            </div>
-            <div class="highlight">
-              <span class="highlight-label">Unsere Qualifikation:</span>
-              <strong>Privatrechtlich anerkannt nach RAP Stra | VMPA anerkannte Betonprüfstelle</strong>
-            </div>
+        <div class="about-text reveal">
+          <span class="section-label">Über uns</span>
+          <h2 class="section-title">Qualitätssicherung aus einer Hand</h2>
+          <p>Als Ingenieurbüro für Baugrund- und Betonuntersuchungen begleiten wir Ihre Projekte im Hoch-, Tief- und Straßenbau – von der ersten Erkundung bis zum fertigen Bauwerk.</p>
+          <p>Steigende Anforderungen an die Dauerhaftigkeit von Bauwerken erfordern qualifizierte Prüfungen und eine lückenlose Überwachung. Genau dafür stehen wir: mit Expertise in Geotechnik, Bodenmechanik und Betontechnologie.</p>
+          <div class="about-pills">
+            <span class="pill">Zuverlässigkeit</span>
+            <span class="pill">Flexibilität</span>
+            <span class="pill">Fachkompetenz</span>
           </div>
           <div class="about-buttons">
-            <a href="#leistungen" class="btn btn-primary">Leistungen</a>
-            <a href="#historie" class="btn btn-primary">Firmengeschichte</a>
+            <a href="#leistungen" class="btn btn-outline">Leistungen</a>
+            <a href="#kontakt" class="btn btn-outline">Kontakt aufnehmen</a>
           </div>
         </div>
-        <div class="about-image">
+        <div class="about-image reveal">
           <img src="images/luftbild.jpg" alt="S-BB Firmengebäude Luftbild" loading="lazy" width="1000" height="600">
         </div>
       </div>
@@ -84,16 +105,19 @@
   <!-- Leistungen -->
   <section class="section section-dark" id="leistungen">
     <div class="container">
-      <h2 class="section-title section-title-light">Unsere Leistungen</h2>
-      <div class="services-grid">
+      <div class="section-header reveal">
+        <span class="section-label section-label-light">Leistungen</span>
+        <h2 class="section-title section-title-light">Unser Leistungsspektrum</h2>
+      </div>
+      <div class="bento-grid">
 
-        <!-- Bodenmechanik -->
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="images/icon-boden.png" alt="" width="64" height="64" loading="lazy">
+        <!-- Bodenmechanik (groß) -->
+        <div class="bento-card bento-large reveal">
+          <div class="bento-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg>
           </div>
           <h3>Bodenmechanik</h3>
-          <ul class="service-list">
+          <ul class="bento-list">
             <li>Plattendruckversuche statisch und dynamisch</li>
             <li>Dichtebestimmungen</li>
             <li>Wassergehaltsbestimmungen</li>
@@ -105,20 +129,19 @@
             <li>Bestimmung des Glühverlustes</li>
             <li>Bestimmung des Kalkgehaltes</li>
             <li>Prüfung der Durchlässigkeit</li>
-            <li>Eignungsnachweise</li>
-            <li>Frostbeständigkeitsprüfungen</li>
+            <li>Eignungsnachweise / Frostbeständigkeit</li>
             <li>CBR-Versuche</li>
-            <li class="service-more"><a href="#kontakt">Weitere Leistungen auf Anfrage</a></li>
           </ul>
+          <a href="#kontakt" class="bento-link">Weitere auf Anfrage →</a>
         </div>
 
-        <!-- Betontechnik -->
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="images/icon-beton.png" alt="" width="64" height="64" loading="lazy">
+        <!-- Betontechnik (groß) -->
+        <div class="bento-card bento-large reveal">
+          <div class="bento-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
           </div>
           <h3>Betontechnik</h3>
-          <ul class="service-list">
+          <ul class="bento-list">
             <li>Eigenüberwachung von ÜK2/3 Baustellen</li>
             <li>Druckfestigkeitsprüfungen</li>
             <li>Wasserundurchlässigkeitsprüfungen</li>
@@ -128,22 +151,22 @@
             <li>Prüfung des Luftporengehaltes</li>
             <li>Bestimmung des w/z-Wertes</li>
             <li>Bestimmung des Stahlfasergehaltes</li>
-            <li class="service-more"><a href="#kontakt">Weitere Leistungen auf Anfrage</a></li>
           </ul>
+          <a href="#kontakt" class="bento-link">Weitere auf Anfrage →</a>
         </div>
 
-        <!-- Sonstiges -->
-        <div class="service-card">
-          <div class="service-icon">
-            <img src="images/icon-sonst.png" alt="" width="64" height="64" loading="lazy">
+        <!-- Sonstiges (klein) -->
+        <div class="bento-card bento-small reveal">
+          <div class="bento-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           </div>
           <h3>Sonstiges</h3>
-          <ul class="service-list">
+          <ul class="bento-list">
             <li>Kernbohrungen in Beton und Asphalt</li>
             <li>Vermittlung von Asphaltprüfungen</li>
             <li>Erkundung für Baugrundgutachten</li>
-            <li class="service-more"><a href="#kontakt">Weitere Leistungen auf Anfrage</a></li>
           </ul>
+          <a href="#kontakt" class="bento-link">Weitere auf Anfrage →</a>
         </div>
 
       </div>
@@ -153,62 +176,73 @@
   <!-- Firmengeschichte -->
   <section class="section" id="historie">
     <div class="container">
-      <h2 class="section-title">Firmengeschichte</h2>
+      <div class="section-header reveal">
+        <span class="section-label">Geschichte</span>
+        <h2 class="section-title">Über 40 Jahre Expertise</h2>
+      </div>
       <div class="timeline">
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><span>1983</span></div>
           <div class="timeline-content">
-            <h3>1983 – 1991</h3>
-            <p>Im Sommer 1983 wurde das Büro für bodenmechanische Baugrunduntersuchungen von Leo Stracke als „Ein-Mann-Betrieb" in Rheinland-Pfalz, in Steinalben, einem kleinen Ort in der Verbandsgemeinde Waldfischbach-Burgalben, gegründet. Schon nach wenigen Wochen musste ein zusätzlicher Mitarbeiter eingestellt werden. 1985 wurde Wohn- und Firmensitz nach Waldfischbach verlegt.</p>
-            <p>Ende 1991 war ein Zweigbüro in Wilsdruff (bei Dresden) entstanden, welche Mitte 1996 an einen ehemaligen Mitarbeiter übergeben wurde.</p>
+            <p>Im Sommer 1983 gründete Leo Stracke in Steinalben (Rheinland-Pfalz) ein Büro für bodenmechanische Baugrunduntersuchungen – zunächst als Ein-Mann-Betrieb. Schon nach wenigen Wochen kam der erste Mitarbeiter dazu. 1985 folgte der Umzug nach Waldfischbach.</p>
+            <p>Ende 1991 entstand ein Zweigbüro in Wilsdruff bei Dresden, das Mitte 1996 an einen ehemaligen Mitarbeiter übergeben wurde.</p>
           </div>
           <div class="timeline-image">
-            <img src="images/historie-001.jpg" alt="S-BB in den Anfangsjahren" loading="lazy" width="1024" height="457">
+            <div class="slideshow">
+              <img src="images/historie-001-1.jpg" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide active">
+              <img src="images/historie-001-2.jpg" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide">
+              <img src="images/historie-001-3.jpg" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide">
+              <img src="images/historie-001-4.jpg" alt="S-BB in den Anfangsjahren" loading="lazy" class="slide">
+            </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><span>2000</span></div>
           <div class="timeline-content">
-            <h3>2000 – 2001</h3>
-            <p>Da die Räumlichkeiten im Wohnhaus in Waldfischbach zu klein geworden waren, wurde im Sommer 2000 mit dem Bau eines neuen Labor- und Bürogebäudes in Höheinöd begonnen. Seit 2001 wird in diesen neuen Räumen gearbeitet.</p>
-            <p>Die Palette der Untersuchungen wurde erweitert. Neben Boden- bzw. Baugrunduntersuchungen führen wir jetzt auch Betonuntersuchungen durch. Unser Büro trägt jetzt den Namen „S-BB – Stracke – Baugrund &amp; Beton".</p>
+            <p>Das Wohnhaus in Waldfischbach wurde zu klein – im Sommer 2000 begann der Bau eines eigenen Labor- und Bürogebäudes in Höheinöd. Seit 2001 arbeiten wir in den neuen Räumen.</p>
+            <p>Gleichzeitig erweiterten wir unser Leistungsspektrum: Neben Baugrunduntersuchungen bieten wir nun auch Betonprüfungen an. Der neue Name: „S-BB – Stracke – Baugrund &amp; Beton".</p>
           </div>
           <div class="timeline-image">
-            <img src="images/historie-002.jpg" alt="Neubau in Höheinöd" loading="lazy" width="1024" height="439">
+            <div class="slideshow">
+              <img src="images/historie-002-1.jpg" alt="Neubau in Höheinöd" loading="lazy" class="slide active">
+              <img src="images/historie-002-2.jpg" alt="Neubau in Höheinöd" loading="lazy" class="slide">
+              <img src="images/historie-002-3.jpg" alt="Neubau in Höheinöd" loading="lazy" class="slide">
+              <img src="images/historie-002-4.jpg" alt="Neubau in Höheinöd" loading="lazy" class="slide">
+            </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><span>2008</span></div>
           <div class="timeline-content">
-            <h3>2008 – 2009</h3>
-            <p>Im Juni 2008 erfolgte die Gründung einer Gesellschaft bürgerlichen Rechts, GbR. Nach erfolgreichem Studium an Fachhochschule und Berufakademie führen nun Christian und Steffen Stracke zusammen mit Leo Stracke die Geschäfte der S-BB GbR.</p>
-            <p>Seit Dezember 2009 besteht ein weiteres Büro in Kelsterbach in unmittelbarer Nähe zum Frankfurter Flughafen. Von dort können ab sofort Ihre Baustellen im Bereich Rhein-Main / Rheinhessen noch schneller und in gewohnter Zuverlässigkeit betreut werden.</p>
+            <p>Im Juni 2008 wurde die S-BB GbR gegründet. Nach ihrem Studium an Fachhochschule und Berufsakademie übernahmen Christian und Steffen Stracke gemeinsam mit Leo Stracke die Geschäftsführung.</p>
+            <p>Seit Dezember 2009 sind wir mit einem zweiten Büro in Kelsterbach vertreten – in unmittelbarer Nähe zum Frankfurter Flughafen.</p>
           </div>
           <div class="timeline-image">
-            <img src="images/historie-003.jpg" alt="Wachstum und neues Büro" loading="lazy" width="1024" height="462">
+            <div class="slideshow">
+              <img src="images/historie-003-1.jpg" alt="Wachstum und neues Büro" loading="lazy" class="slide active">
+              <img src="images/historie-003-2.jpg" alt="Wachstum und neues Büro" loading="lazy" class="slide">
+              <img src="images/historie-003-3.jpg" alt="Wachstum und neues Büro" loading="lazy" class="slide">
+              <img src="images/historie-003-4.jpg" alt="Wachstum und neues Büro" loading="lazy" class="slide">
+            </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><span>2017</span></div>
           <div class="timeline-content">
-            <h3>2017 bis heute</h3>
-            <p>Im Sommer 2017 wurde mit einer umfangreichen Erweiterung und Modernisierung des Büro- und Laborgebäudes in Höheinöd begonnen, welche Anfang 2018 fertiggestellt wurde.</p>
-            <p>Zum 01.01.2018 erfolgte die Gründung der S-BB Baustoffprüfung GmbH durch Christian und Steffen Stracke.</p>
+            <p>Im Sommer 2017 startete die umfangreiche Erweiterung und Modernisierung unseres Standorts in Höheinöd – Anfang 2018 war der Umbau abgeschlossen.</p>
+            <p>Zum 01.01.2018 gründeten Christian und Steffen Stracke die S-BB Baustoffprüfung GmbH.</p>
           </div>
           <div class="timeline-image">
-            <img src="images/historie-004.jpg" alt="Modernisierung 2017/2018" loading="lazy" width="1024" height="457">
+            <div class="slideshow">
+              <img src="images/historie-004-1.jpg" alt="Modernisierung 2017/2018" loading="lazy" class="slide active">
+              <img src="images/historie-004-2.jpg" alt="Modernisierung 2017/2018" loading="lazy" class="slide">
+              <img src="images/historie-004-3.jpg" alt="Modernisierung 2017/2018" loading="lazy" class="slide">
+              <img src="images/historie-004-4.jpg" alt="Modernisierung 2017/2018" loading="lazy" class="slide">
+            </div>
           </div>
         </div>
 
@@ -219,38 +253,43 @@
   <!-- Kontakt -->
   <section class="section section-contact" id="kontakt">
     <div class="container">
-      <h2 class="section-title">Kontakt zu uns</h2>
+      <div class="section-header reveal">
+        <span class="section-label">Kontakt</span>
+        <h2 class="section-title">Sprechen Sie uns an</h2>
+      </div>
 
       <div class="contact-grid">
-        <!-- Büro Westpfalz -->
-        <div class="contact-card">
-          <div class="contact-map" id="map-hoeheinoed"></div>
+        <div class="contact-card reveal">
+          <a href="https://www.google.com/maps/search/?api=1&query=Auf+dem+Land+10,+66989+Höheinöd" target="_blank" rel="noopener" class="contact-map-link">
+            <div class="contact-map" id="map-hoeheinoed"></div>
+          </a>
           <h3>Büro Westpfalz / Saarland</h3>
           <address>
-            <p class="contact-address">Auf dem Land 10<br>66989 Höheinöd</p>
+            <p class="contact-address"><a href="https://www.google.com/maps/search/?api=1&query=Auf+dem+Land+10,+66989+Höheinöd" target="_blank" rel="noopener">Auf dem Land 10<br>66989 Höheinöd</a></p>
             <p class="contact-detail">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               <a href="tel:+4963332754830">0 63 33 / 27 54 83 – 0</a>
             </p>
             <p class="contact-detail">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <a href="mailto:info@s-bb.de">info@s-bb.de</a>
             </p>
           </address>
         </div>
 
-        <!-- Büro Rhein-Main -->
-        <div class="contact-card">
-          <div class="contact-map" id="map-kelsterbach"></div>
+        <div class="contact-card reveal">
+          <a href="https://www.google.com/maps/search/?api=1&query=Waldstraße+40,+65451+Kelsterbach" target="_blank" rel="noopener" class="contact-map-link">
+            <div class="contact-map" id="map-kelsterbach"></div>
+          </a>
           <h3>Büro Rhein-Main</h3>
           <address>
-            <p class="contact-address">Waldstraße 40<br>65451 Kelsterbach</p>
+            <p class="contact-address"><a href="https://www.google.com/maps/search/?api=1&query=Waldstraße+40,+65451+Kelsterbach" target="_blank" rel="noopener">Waldstraße 40<br>65451 Kelsterbach</a></p>
             <p class="contact-detail">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               <a href="tel:+4961073085441">0 61 07 / 30 85 44 – 1</a>
             </p>
             <p class="contact-detail">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <a href="mailto:info@s-bb.de">info@s-bb.de</a>
             </p>
           </address>
@@ -258,69 +297,144 @@
       </div>
 
       <!-- Kontaktformular -->
-      <div class="contact-form-wrapper">
-        <h3>Senden Sie uns eine Nachricht</h3>
-        <p class="contact-form-intro">Der Kontakt zu uns ist schnell und einfach.</p>
+      <div class="contact-form-wrapper reveal">
+        <h3>Schreiben Sie uns</h3>
+        <p class="contact-form-intro">Kurze Frage oder konkretes Projekt? Wir melden uns zeitnah.</p>
         <form class="contact-form" id="contact-form" action="send_mail.php" method="post">
-          <!-- Honeypot (Spam-Schutz, für Nutzer unsichtbar) -->
           <div class="form-honeypot" aria-hidden="true">
             <label for="website">Website</label>
             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
           </div>
           <div class="form-row">
-            <div class="form-group">
+            <div class="form-group floating">
+              <input type="text" id="vorname" name="vorname" placeholder=" " required>
               <label for="vorname">Vorname <span class="required">*</span></label>
-              <input type="text" id="vorname" name="vorname" required>
             </div>
-            <div class="form-group">
+            <div class="form-group floating">
+              <input type="text" id="nachname" name="nachname" placeholder=" " required>
               <label for="nachname">Nachname <span class="required">*</span></label>
-              <input type="text" id="nachname" name="nachname" required>
             </div>
           </div>
           <div class="form-row">
-            <div class="form-group">
+            <div class="form-group floating">
+              <input type="text" id="firma" name="firma" placeholder=" ">
               <label for="firma">Firma</label>
-              <input type="text" id="firma" name="firma">
             </div>
-            <div class="form-group">
+            <div class="form-group floating">
+              <input type="email" id="email" name="email" placeholder=" " required>
               <label for="email">E-Mail <span class="required">*</span></label>
-              <input type="email" id="email" name="email" required>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group floating">
+            <input type="tel" id="telefon" name="telefon" placeholder=" " required>
             <label for="telefon">Telefon <span class="required">*</span></label>
-            <input type="tel" id="telefon" name="telefon" required>
           </div>
-          <div class="form-group">
+          <div class="form-group floating">
+            <textarea id="nachricht" name="nachricht" rows="5" placeholder=" " required></textarea>
             <label for="nachricht">Ihre Nachricht <span class="required">*</span></label>
-            <textarea id="nachricht" name="nachricht" rows="5" required></textarea>
           </div>
           <div class="form-group form-checkbox">
             <input type="checkbox" id="datenschutz" name="datenschutz" required>
             <label for="datenschutz">Ich stimme der <a href="#" id="datenschutz-link">Datenschutzerklärung</a> zu. <span class="required">*</span></label>
           </div>
-          <button type="submit" class="btn btn-primary btn-submit">Absenden</button>
+          <button type="submit" class="btn btn-gradient btn-submit">Nachricht senden</button>
         </form>
       </div>
+    </div>
+  </section>
+
+  <!-- Zertifizierungen -->
+  <section class="certifications">
+    <div class="container">
+      <div class="cert-grid reveal">
+        <div class="cert-badge">
+          <a href="https://www.fba.bund.de/DE/Themen/RAP_Stra/RAP_Stra_node.html" target="_blank" rel="noopener" class="cert-badge-seal">
+            <svg viewBox="0 0 100 46" width="100" height="46">
+              <rect x="1" y="1" width="98" height="44" rx="2" fill="none" stroke="#374151" stroke-width="1.5"/>
+              <rect x="4" y="4" width="92" height="38" rx="1" fill="none" stroke="#374151" stroke-width="0.5"/>
+              <text x="50" y="30" text-anchor="middle" font-family="'Georgia','Times New Roman',serif" font-size="16" font-weight="bold" fill="#1f2937" letter-spacing="1">RAP Stra</text>
+            </svg>
+          </a>
+          <div class="cert-badge-text">
+            <span class="cert-badge-title">RAP Stra</span>
+            <span class="cert-badge-desc">Anerkannte Prüfstelle für Baustoffe im Straßenbau</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <a href="https://www.vmpa.de/pruefstellen/betonpruefstellen/" target="_blank" rel="noopener"><img src="images/vmpa-logo.jpg" alt="VMPA anerkannte Betonprüfstelle" class="cert-badge-logo"></a>
+          <div class="cert-badge-text">
+            <span class="cert-badge-title">VMPA</span>
+            <span class="cert-badge-desc">Anerkannte Betonprüfstelle</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <a href="https://buev-hrs.de/" target="_blank" rel="noopener"><img src="images/buev-hrs-logo.jpg" alt="BÜV.HRS" class="cert-badge-logo"></a>
+          <div class="cert-badge-text">
+            <span class="cert-badge-title">BÜV.HRS</span>
+            <span class="cert-badge-desc">Mitglied im Baustoffüberwachungsverein Hessen – Rheinland-Pfalz – Saarland e.V.</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <a href="https://gbb-web.de/" target="_blank" rel="noopener"><img src="images/gbb-logo.png" alt="GBB" class="cert-badge-logo"></a>
+          <div class="cert-badge-text">
+            <span class="cert-badge-title">GBB</span>
+            <span class="cert-badge-desc">Mitglied der Gütegemeinschaft für Bodenverfestigung und Bodenverbesserung</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <a href="https://www.ral-gg-fluessigboden.de/" target="_blank" rel="noopener"><img src="images/ral-fluessigboden-logo.png" alt="RAL Gütezeichen Flüssigboden" class="cert-badge-logo"></a>
+          <div class="cert-badge-text">
+            <span class="cert-badge-title">RAL Flüssigboden</span>
+            <span class="cert-badge-desc">Mitglied der RAL Gütegemeinschaft Flüssigboden</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <a href="https://wfg-suedwestpfalz.de/" target="_blank" rel="noopener"><img src="images/wfg-suedwestpfalz-logo.png" alt="WFG Südwestpfalz" class="cert-badge-logo"></a>
+          <div class="cert-badge-text">
+            <span class="cert-badge-title">WFG Südwestpfalz</span>
+            <span class="cert-badge-desc">Mitglied der Wirtschaftsförderungsgesellschaft Südwestpfalz</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <a href="https://www.ihk.de/pfalz/produktmarken/ausbildung" target="_blank" rel="noopener"><img src="images/ihk-pfalz-logo.png" alt="IHK Pfalz" class="cert-badge-logo"></a>
+          <div class="cert-badge-text">
+            <span class="cert-badge-title">IHK Pfalz</span>
+            <span class="cert-badge-desc">Anerkannter Ausbildungsbetrieb der IHK Pfalz</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <a href="https://www.mosbach.dhbw.de/" target="_blank" rel="noopener"><img src="images/dhbw-mosbach-logo.png" alt="DHBW Mosbach" class="cert-badge-logo"></a>
+          <div class="cert-badge-text">
+            <span class="cert-badge-title">DHBW Mosbach</span>
+            <span class="cert-badge-desc">Partnerunternehmen der Dualen Hochschule Baden-Württemberg Mosbach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container reveal">
+      <h2>Projekt geplant?</h2>
+      <p>Wir beraten Sie gerne – unverbindlich und kompetent.</p>
+      <a href="#kontakt" class="btn-white">Kontakt aufnehmen</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-logo">
-        <img src="images/logo-lang.png" alt="S-BB Baustoffprüfung GmbH" width="200" height="24" loading="lazy">
-      </div>
+      <a href="#home" class="footer-logo">
+        <img src="images/logo.png" alt="S-BB" width="60" height="31">
+      </a>
       <div class="footer-links">
         <button type="button" class="footer-link" id="impressum-btn">Impressum</button>
-        <span class="footer-sep">|</span>
         <button type="button" class="footer-link" id="datenschutz-btn">Datenschutz</button>
-        <span class="footer-sep">|</span>
         <button type="button" class="footer-link" id="agb-btn">AGB</button>
       </div>
       <div class="footer-contact">
-        <a href="mailto:stracke@s-bb.de">stracke@s-bb.de</a>
-        <span class="footer-sep">|</span>
+        <a href="mailto:info@s-bb.de">info@s-bb.de</a>
         <a href="tel:+4963332754830">0 63 33 / 27 54 83 – 0</a>
       </div>
     </div>
@@ -336,7 +450,7 @@
 
   <!-- Back to top -->
   <a href="#home" class="back-to-top" id="back-to-top" aria-label="Nach oben">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
   </a>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
