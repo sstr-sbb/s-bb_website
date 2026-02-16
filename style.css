@@ -188,11 +188,16 @@ address { font-style: normal; }
 
 .nav-phone:hover { color: #fff; border-color: rgba(255, 255, 255, 0.4); }
 
+.nav-socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
 .nav-social {
   display: inline-flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.4);
-  margin-top: 12px;
   transition: color 0.2s;
 }
 .nav-social:hover { color: #fff; }
@@ -1236,7 +1241,7 @@ address { font-style: normal; }
 
   .header.desktop-nav .nav-list { flex-direction: row; gap: 0; }
   .header.desktop-nav .nav-link { font-size: 0.85rem; padding: 8px 14px; white-space: nowrap; }
-  .header.desktop-nav .nav-social { margin-top: 0; margin-left: 16px; }
+  .header.desktop-nav .nav-socials { margin-top: 0; margin-left: 16px; }
   .header.desktop-nav .nav-phone { margin-top: 0; margin-left: 8px; white-space: nowrap; }
 
 @media (min-width: 768px) {
