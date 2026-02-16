@@ -81,43 +81,74 @@
   var headerLogo = document.querySelector('.logo');
   var heroLogoImg = document.querySelector('.hero-logo');
 
-  // Measure header logo's natural position (without transforms)
+  // Measure header layout and toggle desktop/mobile nav
   var logoNaturalCenterX = 0;
   var logoText = document.querySelector('.logo-text');
-  function measureLogo() {
+  var logoSuffix = logoText ? logoText.querySelector('.logo-suffix') : null;
+
+  function measureHeader() {
     var prev = headerLogo.style.cssText;
     headerLogo.style.cssText = 'opacity:1; transform:none; pointer-events:none;';
+
+    // Einzelbreiten messen
+    var logoImg = headerLogo.querySelector('img');
+    var logoGap = parseFloat(getComputedStyle(headerLogo).gap) || 0;
+    var imgW = logoImg ? logoImg.offsetWidth : 0;
+    var headerRight = header.querySelector('.header-right');
+    var containerPad = parseFloat(getComputedStyle(header.querySelector('.header-inner')).paddingLeft) * 2 || 0;
+    var totalW = window.innerWidth - containerPad;
+    var buffer = 16;
+
+    // Textbreiten messen (unsichtbar, aber im DOM)
+    if (logoText) { logoText.style.display = ''; logoText.style.fontSize = ''; }
+    if (logoSuffix) logoSuffix.style.display = 'inline';
+    var fullTextW = logoText ? logoText.scrollWidth : 0;
+    if (logoSuffix) logoSuffix.style.display = 'none';
+    var shortTextW = logoText ? logoText.scrollWidth : 0;
+    if (logoSuffix) logoSuffix.style.display = 'inline';
+
+    // Nav-Breite messen (im Desktop-Modus)
+    header.classList.add('desktop-nav');
+    var navW = nav.scrollWidth;
+
+    // Desktop: Logo + Text + Nav <= Fensterbreite?
+    var logoBase = imgW + logoGap;
+    var desktopLevel = -1;
+    if (logoBase + fullTextW + navW + buffer <= totalW) desktopLevel = 0;
+    else if (logoBase + shortTextW + navW + buffer <= totalW) desktopLevel = 1;
+    else if (logoBase + navW + buffer <= totalW) desktopLevel = 2;
+
+    if (desktopLevel >= 0) {
+      // Desktop-Modus
+      nav.classList.remove('open');
+      menuToggle.classList.remove('open');
+      if (logoText) logoText.style.display = desktopLevel < 2 ? '' : 'none';
+      if (logoSuffix) logoSuffix.style.display = desktopLevel === 0 ? 'inline' : 'none';
+    } else {
+      // Burger-Modus
+      header.classList.remove('desktop-nav');
+      var rightW = headerRight ? headerRight.offsetWidth : 0;
+      var available = totalW - rightW - logoBase - buffer;
+
+      if (fullTextW <= available) {
+        if (logoText) logoText.style.display = '';
+        if (logoSuffix) logoSuffix.style.display = 'inline';
+      } else if (shortTextW <= available) {
+        if (logoText) logoText.style.display = '';
+        if (logoSuffix) logoSuffix.style.display = 'none';
+      } else {
+        if (logoText) logoText.style.display = 'none';
+      }
+    }
+
+    // Logo-Position messen (für Scroll-Animation)
     var rect = headerLogo.getBoundingClientRect();
     logoNaturalCenterX = rect.left + rect.width / 2;
 
-    // Dynamische Schriftgröße + GmbH ein-/ausblenden
-    if (logoText) {
-      var logoSuffix = logoText.querySelector('.logo-suffix');
-      var logoImg = headerLogo.querySelector('img');
-      var gap = parseFloat(getComputedStyle(headerLogo).gap) || 0;
-      var logoW = headerLogo.offsetWidth;
-      var imgW = logoImg ? logoImg.offsetWidth : 0;
-      var available = logoW - imgW - gap - 2;
-
-      // Erst mit GmbH versuchen
-      logoText.style.fontSize = '';
-      if (logoSuffix) logoSuffix.style.display = 'inline';
-      if (logoText.scrollWidth <= available) return void (headerLogo.style.cssText = prev);
-
-      // Passt nicht → GmbH ausblenden
-      if (logoSuffix) logoSuffix.style.display = 'none';
-      if (logoText.scrollWidth <= available) return void (headerLogo.style.cssText = prev);
-
-      // Immer noch zu breit → Schrift verkleinern
-      var maxSize = parseFloat(getComputedStyle(logoText).fontSize);
-      var size = maxSize * (available / logoText.scrollWidth);
-      logoText.style.fontSize = Math.max(8, size) + 'px';
-    }
-
     headerLogo.style.cssText = prev;
   }
-  measureLogo();
-  window.addEventListener('resize', measureLogo);
+  measureHeader();
+  window.addEventListener('resize', measureHeader);
 
   window.addEventListener('scroll', function () {
     var scrollY = window.scrollY;

@@ -1211,13 +1211,13 @@ address { font-style: normal; }
 /* ============================================
    Tablet (>= 768px)
    ============================================ */
-@media (min-width: 768px) {
-  .header-inner { height: 72px; }
-  .menu-toggle { display: none; }
-  .mobile-action { display: none; }
-  .logo { flex: initial; min-width: auto; }
+/* Desktop-Navigation (dynamisch per JS gesteuert) */
+  .header.desktop-nav .header-inner { height: 72px; }
+  .header.desktop-nav .menu-toggle { display: none; }
+  .header.desktop-nav .mobile-action { display: none; }
+  .header.desktop-nav .logo { flex: initial; min-width: auto; }
 
-  .nav {
+  .header.desktop-nav .nav {
     display: flex;
     position: static;
     background: transparent;
@@ -1229,15 +1229,17 @@ address { font-style: normal; }
     border-bottom: none;
   }
 
-  .nav::before,
-  .nav::after {
+  .header.desktop-nav .nav::before,
+  .header.desktop-nav .nav::after {
     display: none;
   }
 
-  .nav-list { flex-direction: row; gap: 0; }
-  .nav-link { font-size: 0.85rem; padding: 8px 14px; }
-  .nav-social { margin-top: 0; margin-left: 16px; }
-  .nav-phone { margin-top: 0; margin-left: 8px; }
+  .header.desktop-nav .nav-list { flex-direction: row; gap: 0; }
+  .header.desktop-nav .nav-link { font-size: 0.85rem; padding: 8px 14px; white-space: nowrap; }
+  .header.desktop-nav .nav-social { margin-top: 0; margin-left: 16px; }
+  .header.desktop-nav .nav-phone { margin-top: 0; margin-left: 8px; white-space: nowrap; }
+
+@media (min-width: 768px) {
 
   .stats-grid { grid-template-columns: repeat(5, 1fr); }
   .stats { padding: 56px 0; }
