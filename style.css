@@ -194,6 +194,24 @@ address { font-style: normal; }
 }
 .nav-social:hover { color: #fff; }
 
+/* Header right (mobile actions + burger) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mobile-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s;
+}
+.mobile-action:hover { color: #fff; }
+
 /* Hamburger */
 .menu-toggle {
   display: flex;
@@ -1192,6 +1210,7 @@ address { font-style: normal; }
 @media (min-width: 768px) {
   .header-inner { height: 72px; }
   .menu-toggle { display: none; }
+  .mobile-action { display: none; }
 
   .nav {
     display: flex;
