@@ -83,11 +83,37 @@
 
   // Measure header logo's natural position (without transforms)
   var logoNaturalCenterX = 0;
+  var logoText = document.querySelector('.logo-text');
   function measureLogo() {
     var prev = headerLogo.style.cssText;
     headerLogo.style.cssText = 'opacity:1; transform:none; pointer-events:none;';
     var rect = headerLogo.getBoundingClientRect();
     logoNaturalCenterX = rect.left + rect.width / 2;
+
+    // Dynamische Schriftgröße + GmbH ein-/ausblenden
+    if (logoText) {
+      var logoSuffix = logoText.querySelector('.logo-suffix');
+      var logoImg = headerLogo.querySelector('img');
+      var gap = parseFloat(getComputedStyle(headerLogo).gap) || 0;
+      var logoW = headerLogo.offsetWidth;
+      var imgW = logoImg ? logoImg.offsetWidth : 0;
+      var available = logoW - imgW - gap - 2;
+
+      // Erst mit GmbH versuchen
+      logoText.style.fontSize = '';
+      if (logoSuffix) logoSuffix.style.display = 'inline';
+      if (logoText.scrollWidth <= available) return void (headerLogo.style.cssText = prev);
+
+      // Passt nicht → GmbH ausblenden
+      if (logoSuffix) logoSuffix.style.display = 'none';
+      if (logoText.scrollWidth <= available) return void (headerLogo.style.cssText = prev);
+
+      // Immer noch zu breit → Schrift verkleinern
+      var maxSize = parseFloat(getComputedStyle(logoText).fontSize);
+      var size = maxSize * (available / logoText.scrollWidth);
+      logoText.style.fontSize = Math.max(8, size) + 'px';
+    }
+
     headerLogo.style.cssText = prev;
   }
   measureLogo();

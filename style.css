@@ -119,6 +119,8 @@ address { font-style: normal; }
   opacity: 0;
   pointer-events: none;
   will-change: transform, opacity;
+  flex: 1;
+  min-width: 0;
 }
 
 .logo img {
@@ -132,6 +134,7 @@ address { font-style: normal; }
   color: #fff;
   white-space: nowrap;
 }
+
 
 .nav {
   display: none;
@@ -199,6 +202,7 @@ address { font-style: normal; }
   display: flex;
   align-items: center;
   gap: 4px;
+  flex-shrink: 0;
 }
 
 .mobile-action {
@@ -1211,6 +1215,7 @@ address { font-style: normal; }
   .header-inner { height: 72px; }
   .menu-toggle { display: none; }
   .mobile-action { display: none; }
+  .logo { flex: initial; min-width: auto; }
 
   .nav {
     display: flex;
