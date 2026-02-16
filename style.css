@@ -74,18 +74,37 @@ address { font-style: normal; }
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(10, 10, 26, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  transition: box-shadow 0.3s;
+  background: transparent;
 }
 
-.header.scrolled {
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('images/hero-bg.jpg') center/cover no-repeat fixed;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 26, 0.92);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.header.scrolled::before,
+.header.scrolled::after {
+  opacity: 1;
 }
 
 .header-inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -96,13 +115,15 @@ address { font-style: normal; }
   display: flex;
   align-items: center;
   gap: 0.35em;
+  transform-origin: center center;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
 }
 
 .logo img {
   height: 40px;
   width: auto;
-  opacity: 0;
-  transition: opacity 0.3s;
 }
 
 .logo-text {
@@ -110,13 +131,6 @@ address { font-style: normal; }
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.header.show-logo .logo img,
-.header.show-logo .logo-text {
-  opacity: 1;
 }
 
 .nav {

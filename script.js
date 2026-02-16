@@ -76,17 +76,74 @@
   var sections = document.querySelectorAll('section[id]');
   var navLinks = document.querySelectorAll('.nav-link');
 
-  // Show header logo only when hero logo scrolls out of view
-  var heroLogo = document.querySelector('.hero-logo');
-  if (heroLogo) {
-    new IntersectionObserver(function (entries) {
-      header.classList.toggle('show-logo', !entries[0].isIntersecting);
-    }, { threshold: 0 }).observe(heroLogo);
+  // Scroll-driven logo animation: hero logo moves into header
+  var heroH1 = document.querySelector('.hero h1');
+  var headerLogo = document.querySelector('.logo');
+  var heroLogoImg = document.querySelector('.hero-logo');
+
+  // Measure header logo's natural position (without transforms)
+  var logoNaturalCenterX = 0;
+  function measureLogo() {
+    var prev = headerLogo.style.cssText;
+    headerLogo.style.cssText = 'opacity:1; transform:none; pointer-events:none;';
+    var rect = headerLogo.getBoundingClientRect();
+    logoNaturalCenterX = rect.left + rect.width / 2;
+    headerLogo.style.cssText = prev;
   }
+  measureLogo();
+  window.addEventListener('resize', measureLogo);
 
   window.addEventListener('scroll', function () {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-    backToTop.classList.toggle('visible', window.scrollY > 500);
+    var scrollY = window.scrollY;
+    var headerH = header.offsetHeight;
+
+    // Hero h1 position
+    var heroH1Rect = heroH1.getBoundingClientRect();
+    var heroH1AbsTop = heroH1Rect.top + scrollY;
+    var heroH1CenterY = heroH1Rect.top + heroH1Rect.height / 2;
+
+    // Animation: startet 250px bevor Hero-Logo den Header erreicht
+    var animEnd = heroH1AbsTop - headerH;
+    var animStart = Math.max(0, animEnd - 50);
+    if (animEnd <= animStart) animEnd = animStart + 1;
+
+    var t = Math.max(0, Math.min(1, (scrollY - animStart) / (animEnd - animStart)));
+    // Ease-in-out
+    var e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+    // Header-Hintergrund erst einblenden wenn Logo-Animation fertig ist
+    header.classList.toggle('scrolled', t >= 1);
+
+    if (t <= 0) {
+      headerLogo.style.opacity = '0';
+      headerLogo.style.pointerEvents = 'none';
+      headerLogo.style.transform = '';
+      heroH1.style.opacity = '';
+      heroH1.style.visibility = '';
+    } else {
+      // Crossfade (in ersten 20% der Animation)
+      var swap = Math.min(1, t / 0.2);
+      heroH1.style.opacity = String(1 - swap);
+      heroH1.style.visibility = swap >= 1 ? 'hidden' : '';
+      headerLogo.style.opacity = String(swap);
+      headerLogo.style.pointerEvents = swap >= 1 ? 'auto' : 'none';
+
+      // Scale: max 1.3x um Menü nicht zu überdecken
+      var maxScale = 1.3;
+      var currentScale = maxScale + (1 - maxScale) * e;
+
+      // Horizontal: Bildschirmmitte → Header-Logo-Position
+      var viewportCenterX = window.innerWidth / 2;
+      var offsetX = (viewportCenterX - logoNaturalCenterX) * (1 - e);
+
+      // Vertikal: Hero-H1-Position → Header-Mitte (folgt dem Hero-Logo)
+      var headerCenterY = headerH / 2;
+      var offsetY = (heroH1CenterY - headerCenterY) * (1 - e);
+
+      headerLogo.style.transform = 'translate(' + offsetX + 'px, ' + offsetY + 'px) scale(' + currentScale + ')';
+    }
+
+    backToTop.classList.toggle('visible', scrollY > 500);
 
     // Active nav
     var scrollPos = window.scrollY + 120;
